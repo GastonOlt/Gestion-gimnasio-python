@@ -1,0 +1,38 @@
+{% extends 'app_empresaGimnasio/base.html' %}
+
+{% block title%} Listado Servicio  {% endblock %}
+  
+{% block content %}
+
+
+
+<div class="container mt-5">
+<!--   <h2 class="text-center mb-4">Listado de Servicios</h2> -->
+  <div class="card-header bg-dark text-white">
+    <h4 class="mb-0" style="text-align: center;">Listado de Servicios</h4>
+</div>
+  <div class="table-responsive">
+    <table class="table table-dark table-hover table-striped text-center align-middle">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">Nombre</th>
+          <th scope="col">Descripcion </th>
+          <th scope="col">Precio</th>
+       
+        </tr>
+      </thead>
+      <tbody>
+        {% for servicio in servicios %}
+          <tr>
+            <td>{{ servicio.nombre}}</td>
+            <td>{{ servicio.descripcion}}</td>
+            <td>{{ servicio.precio}}</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
+{% endblock %}

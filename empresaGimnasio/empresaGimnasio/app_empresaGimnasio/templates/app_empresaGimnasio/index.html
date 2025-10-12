@@ -1,0 +1,25 @@
+{% extends 'app_empresaGimnasio/base.html' %}
+
+{% block title%} indice  {% endblock %}
+  
+{% block content %}
+
+   <!-- Contenido Principal -->
+  <!--  <div class="container mt-5" >
+    <h1>Bienvenido a Nuestro Gimnasio</h1>
+    <p>Aquí puedes encontrar todos los <a href="{% url 'listadoServicio' %}">servicios que ofrecemos.</a></p>
+    
+</div> -->
+<!-- <div class="card-header bg-dark text-white" >
+    <h1>Bienvenido a Nuestro Gimnasio</h1>
+    <p>Aquí puedes encontrar todos los <a href="{% url 'listadoServicio' %}">servicios que ofrecemos.</a></p>
+    
+</div> -->
+
+<div class="card-header" style="background-color: rgba(0, 0, 0, 0.5); color: white;">
+    <h1>Bienvenido a Nuestro Gimnasio</h1>
+    <p>Aquí puedes encontrar todos los <a href="{% url 'listadoServicio' %}" style="color: rgb(16, 41, 185);">servicios que ofrecemos.</a></p>
+</div>
+
+
+{% endblock %}

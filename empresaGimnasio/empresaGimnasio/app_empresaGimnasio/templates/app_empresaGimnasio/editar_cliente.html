@@ -1,0 +1,98 @@
+
+
+
+{% extends 'app_empresaGimnasio/base.html' %}
+
+{% load crispy_forms_tags %}
+
+
+{% block title%} Editar Cliente  {% endblock %}
+  
+{% block content %}
+
+
+
+<!-- Tarjeta que dice "Alta Cliente" -->
+<!-- <div class="card mb-3">
+   <div class="card-header">
+      Alta Clientes
+   </div>
+</div> -->
+
+<!-- Tarjeta del formulario de registro -->
+<!-- <div class="card">
+   <div class="card-header">
+      Editar de Cliente
+   </div>
+   <div class="card-body"> -->
+     <!--  <h5 class="card-title">editar Cliente</h5> -->
+    <!--   <p class="card-text">Por favor completa los datos del Formulario</p> -->
+
+      <!-- Formulario -->
+    <!--   <form method='POST' enctype=”multipart/form-data”>
+         {% csrf_token %} -->
+         <!-- Modificando los tamaños de los campos -->
+       <!--   <div class="row">
+            <div class="col-md-6"> -->
+               <!-- Campos del formulario con tamaño más pequeño -->
+          <!--      {{ formcliente | crispy }}
+            </div>
+         </div> -->
+
+         <!-- Botón de registro -->
+    <!--      <button type="submit" class="btn btn-outline-primary btn-sm" title="Editar Cliente">
+            <i class="fa fa-floppy-o" aria-hidden="true"></i> Guardar Cambios
+         </button>
+      </form>
+   </div> -->
+
+   <!-- Botón de Inicio -->
+   <!-- <div class="card-body">
+      <p>
+         <a href="/" class="btn btn-outline-secondary btn-sm">Inicio</a>
+      </p>
+   </div>
+</div> -->
+
+
+
+<!-- Contenedor principal centrado -->
+<div class="container mt-5" style="max-width: 40%;">
+   <!-- Tarjeta del formulario de registro -->
+   <div class="card shadow-lg">
+       <div class="card-header bg-dark text-white">
+           <h4 class="mb-0">Editar Cliente</h4>
+       </div>
+       <div class="card-body">
+        <!--    <h5 class="card-title">Nuevo Cliente</h5> -->
+          <p class="card-text">Por favor completa los datos del formulario.</p>  
+
+           <!-- Formulario -->
+           <form method="POST" enctype="multipart/form-data">
+               {% csrf_token %}
+               <div class="row" style="width: 200%;">
+                   <div class="col-md-6"> 
+                       <!-- Campos del formulario con estilo mejorado -->
+                       {{ formcliente|crispy }}
+                   </div>
+               </div> 
+
+               <!-- Botón de registro -->
+               <div class="mt-4">
+                   <button type="submit" class="btn btn-primary" title="Guardar Cambios ">
+                       <i class="fa fa-save"></i> Guardar Cambios
+                   </button>
+                   <a href="/" class="btn btn-secondary" title="Regresar a inicio">
+                       <i class="fa fa-home"></i> Inicio
+                   </a>
+               </div>
+           </form>
+       </div>
+   </div>
+</div>
+
+
+
+{% endblock %}
+
+  

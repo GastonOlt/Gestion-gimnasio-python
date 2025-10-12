@@ -1,0 +1,47 @@
+{% extends 'app_empresaGimnasio/base.html' %}
+
+{% load crispy_forms_tags %}
+
+{% block title %} Nuevo Cliente {% endblock %}
+
+{% block content %}
+
+<!-- Contenedor principal centrado -->
+<div class="container mt-5" style="max-width: 40%;">
+    <!-- Tarjeta del formulario de registro -->
+    <div class="card shadow-lg">
+        <div class="card-header bg-dark text-white">
+            <h4 class="mb-0">Registro de Clientes</h4>
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">Nuevo Cliente</h5>
+            <p class="card-text">Por favor completa los datos del formulario.</p> 
+
+            <!-- Formulario -->
+            <form method="POST" enctype="multipart/form-data" >
+                {% csrf_token %}
+                <div class="row" style="width: 200%;">
+                    <div class="col-md-6" > 
+                        <!-- Campos del formulario con estilo mejorado -->
+                        {{ formcliente|crispy }}
+                    </div>
+                </div> 
+
+                <!-- Botón de registro -->
+                <div class="mt-4">
+                    <button type="submit" class="btn btn-primary" title="Graba Nuevo Cliente">
+                        <i class="fa fa-save"></i> Registrar
+                    </button>
+                    <a href="/" class="btn btn-secondary" title="Regresar a inicio">
+                        <i class="fa fa-home"></i> Inicio
+                    </a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+<!-- Estilos personalizados -->
+
